@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message ScheduledEvents {
+    repeated ScheduledEvent events = 1;
+}
+
+message ScheduledEvent {
+    uint64 msFromEpoch = 1;
+    string target = 2;
+    string eventKey = 3;
+}
+
+message ScheduledBuckets {
+    repeated uint64 bucketIds = 1;
+}
